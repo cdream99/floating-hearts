@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container {
+  position: relative;
+  width: 1800px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  content: url("./heart.svg");
+  fill: red !important;
+  animation: breathing;
+  animation-duration: 2500ms;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  transition: 60s;
+  transition-timing-function: linear;
+}
+@keyframes breathing {
+  0%,
+  50% {
+    transform: scale(1.25);
+  }
+  25%,
+  75% {
+    transform: scale(1.5);
+  }
+}
